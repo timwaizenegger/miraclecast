@@ -128,6 +128,9 @@ function kill_ubuntu_network_manager {
    then
       echo stopping NetworkManager
       sudo service NetworkManager stop
+      sudo systemctl disable avahi-daemon
+      sudo systemctl stop avahi-daemon
+      sudo systemctl stop network-manager
    fi
 }
 

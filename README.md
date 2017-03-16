@@ -144,6 +144,20 @@ Steps to use it as peer:
 
  5. Apart from list, or show info with peer &lt;mac&gt; there's nothing useful here by now. For a Q&D see [Using as peer](https://github.com/albfan/miraclecast/issues/4)
 
+
+## Troubleshooting
+
+* Check if you have a firewall running if the wifi connection can't be established
+
+* If you're having issues with the wifi connection (no ifname, see pull #125 ) try 
+    
+        miracle-wifid --use-dev
+    
+* If you're having issues with built-in gstreamer playback, you can try running vlc manually after successful connection:
+        
+        vlc rtp://@:1991
+        
+
 ## UIBC
 
 > The User Input Back Channel (UIBC) is an optional WFD feature that when implemented facilitates communication of user inputs to a User Interface, present at the WFD Sink, to the WFD Source.
