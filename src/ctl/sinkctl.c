@@ -64,8 +64,8 @@ bool uibc_enabled;
 int rstp_port;
 int uibc_port;
 
-unsigned int wfd_supported_res_cea  = 0x0000001f;	/* up to 720x576 */
-unsigned int wfd_supported_res_vesa = 0x00000003;	/* up to 800x600 */
+unsigned int wfd_supported_res_cea  = 0x000000ff;	/* up to 1080p */
+unsigned int wfd_supported_res_vesa = 0x00000000;	/* not supported */
 unsigned int wfd_supported_res_hh   = 0x00000000;	/* not supported */
 
 /*
