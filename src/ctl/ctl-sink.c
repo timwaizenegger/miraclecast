@@ -86,8 +86,8 @@ static void sink_handle_get_parameter(struct ctl_sink *s,
     /* wfd_content_protection */
     if (rtsp_message_read(m, "{<>}", "wfd_content_protection") >= 0) {
         r = rtsp_message_append(rep, "{&}",
-                                "wfd_content_protection: none");
-                                //"wfd_content_protection: HDCP2.1");
+                                //"wfd_content_protection: none");
+                                "wfd_content_protection: HDCP2.0 port=1189 ");
         if (r < 0)
             return cli_vERR(r);
     }
